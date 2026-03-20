@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema de Auto Peças</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Cadastro de Peças</h1>
+      <div class="actions">
+        <button id="btnAdd" class="btn btn-add">+ Adicionar Peça</button>
+        <input id="search" type="text" placeholder="Buscar..." />
+      </div>
+    </header>
+
+    <div id="formBox" class="form-box hidden">
+      <h2 id="formTitle">Adicionar Peça</h2>
+      <form id="pecaForm">
+        <input type="hidden" id="pecaId" />
+        <div class="field"><label>Peça</label><input id="nome" type="text" required></div>
+        <div class="field"><label>Valor</label><input id="valor" type="number" min="0" step="0.01" required></div>
+        <div class="field"><label>Quantidade</label><input id="quantidade" type="number" min="0" required></div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-save">Salvar</button>
+          <button id="cancel" type="button" class="btn btn-cancel">Cancelar</button>
+        </div>
+      </form>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Peça</th>
+          <th>Valor da Peça</th>
+          <th>Quantidade</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="pecaTable"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
